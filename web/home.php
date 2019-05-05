@@ -26,13 +26,12 @@
 <h3>Assignments Page</h3>
     
 <a href="assignments.html"> Assignments Page </a>
-    
+
+<div id="datetime">
 <?php 
-  
-echo "Today's date is :"; 
-$today = date("d/m/Y"); 
-echo $today; 
-  
+echo date("h:i:s a") . "\n"; 
+echo date("M,d,Y") . "\n"; 
 ?> 
+</div>
 </body>
 </html>
