@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<h1>Welcome to Kean Weithofer's CS 313 Assignment Site</h1>
+<h1>Kean Weithofer's CS-313 Assignment Page</h1>
 
 <img src="/images/headshot.jpg"> 
 
@@ -26,5 +26,13 @@
 <h3>Assignments Page</h3>
     
 <a href="assignments.html"> Assignments Page </a>
+    
+<?php 
+  
+echo "Today's date is :"; 
+$today = date("d/m/Y"); 
+echo $today; 
+  
+?> 
 </body>
 </html>
