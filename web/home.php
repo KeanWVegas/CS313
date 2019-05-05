@@ -29,8 +29,8 @@
 
 <div id="datetime">
 <?php 
-echo date("h:i:s a") . "\n"; 
-echo date("M,d,Y") . "\n"; 
+echo date("h:i:s a \n"); 
+echo date("M,d,Y"); 
 ?> 
 </div>
 </body>
