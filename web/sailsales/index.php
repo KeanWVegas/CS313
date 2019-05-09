@@ -25,7 +25,7 @@
     session_start();
 
     if (isset($POST['Submit'])) {
-    $_SESSION['picturenum'] = $_POST['picturenum'];    
+    $_SESSION['sailboat01'] = $_POST['sailboat01'];    
     }
 ?>
 
