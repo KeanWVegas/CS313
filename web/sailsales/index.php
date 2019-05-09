@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Sail Sales Home</title>
 </head>
@@ -16,17 +17,18 @@
         Price: $3.50 <br>
         Quantity:
         <input type="number" name="sailboat01" min="1" max="99" maxlength="2" value="1"><br>
-        <input type="submit">
+        <input type="submit" value="Add to Cart">
     </form>
-    
+
     <?php
 
-    // Start the session
-    session_start();
-
+    $cookie_name ="cart";
+    $cookie_value = $_POST['sailboat01'];
     if (isset($POST['Submit'])) {
-    $_SESSION['sailboat01'] = $_POST['sailboat01'];    
+       
     }
 ?>
 
-</body></html>
+</body>
+
+</html>
