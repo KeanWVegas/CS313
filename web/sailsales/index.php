@@ -24,8 +24,9 @@
 
     $cookie_name ="cart";
     $cookie_value = $_POST['sailboat01'];
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
     if (isset($POST['Submit'])) {
-       echo $cookie_name["cart"];
+       echo $_COOKIE["cart"];
     }
 ?>
 
