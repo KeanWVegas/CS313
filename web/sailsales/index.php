@@ -20,12 +20,7 @@
         <input type="submit" value="Add to Cart">
     </form>
 
-    <?php
-    $form_array = array("item", "productimg", "price", "quantity")
-    $cookie_name ="cart";
-    $cookie_value = $form_array;
-    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-?>
+
 
 </body>
 
