@@ -25,10 +25,10 @@
     $cookie_name ="cart";
     $cookie_value = $_POST['sailboat01'];
     if (isset($POST['Submit'])) {
-       <?php echo $cookie_name["cart"]; ?>
+       
     }
 ?>
-
+<?php echo $cookie_name["cart"]; ?>
 </body>
 
 </html>
