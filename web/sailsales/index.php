@@ -12,22 +12,19 @@
 
 <body>
     <form action="" method="post">
-        <input type="" value="Dreamyboat"> <br>
-        <img src="../images/headshot.jpg" id="itemimg"> <br>
-        <input type="" value="$3.50"><br>
+        <input type="" value="Dreamyboat" name="item"> <br>
+        <img src="../images/headshot.jpg" id="itemimg" name="productimg"> <br>
+        <input type="" value="$3.50" name="price"><br>
         Quantity:
-        <input type="number" name="sailboat01" min="1" max="99" maxlength="2" value="1"><br>
+        <input type="number" name="quantity" min="1" max="99" maxlength="2" value="1"><br>
         <input type="submit" value="Add to Cart">
     </form>
 
     <?php
-
+    $form_array = array("item", "productimg", "price", "quantity")
     $cookie_name ="cart";
-    $cookie_value = $_POST['sailboat01'];
+    $cookie_value = $form_array;
     setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-    if (isset($POST['Submit'])) {
-       echo $_COOKIE["cart"];
-    }
 ?>
 
 </body>
