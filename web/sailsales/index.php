@@ -11,7 +11,7 @@
 </header>
 
 <body>
-    <form action="/phptest.php" method="post">
+    <form action="phptest.php" method="post">
         <input type="" value="Dreamyboat" name="item"> <br>
         <img src="../images/headshot.jpg" id="itemimg" name="productimg"> <br>
         <input type="" value="$3.50" name="price"><br>
