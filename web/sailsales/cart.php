@@ -11,6 +11,6 @@
 
 <body>
 <h1>Cart:</h1>
-<?php echo $_POST["sailboat01"]; ?>
+<?php echo $_SESSION["sailboat01"]; ?>
 
 </body></html>
