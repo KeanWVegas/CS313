@@ -12,9 +12,9 @@
 
 <body>
     <form action="" method="post">
-        Dreamyboat <br>
+        <input type="" value="Dreamyboat"> <br>
         <img src="../images/headshot.jpg" id="itemimg"> <br>
-        Price: $3.50 <br>
+        <input type="" value="$3.50"><br>
         Quantity:
         <input type="number" name="sailboat01" min="1" max="99" maxlength="2" value="1"><br>
         <input type="submit" value="Add to Cart">
