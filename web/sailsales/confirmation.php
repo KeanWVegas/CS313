@@ -15,7 +15,7 @@ session_start();
 <body>
 <?php
             foreach($_SESSION['address'] as $key => $print) {
-                print "Address: ".$_SESSION['address']. "<br>";
+                print "Address: ".$_SESSION['address']['street']. "<br>";
             }
         ?>
 </body>
