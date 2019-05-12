@@ -3,8 +3,6 @@
 session_start();
 
 ?>
-<!DOCTYPE html>
-<html>
 <head>
     <title>Sail Sales Cart</title>
 </head>
@@ -16,27 +14,36 @@ session_start();
 
 <body>
 <h1>Cart:</h1>
+
 <?php
-// Set a default total
+// Display cart items
+//Need to set base total
 $total = 0;
+//Loop through items, display, create remove button (assign item key value)
 foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $items[$ino]['name']; ?>
+        Name: <?php echo $items[$ino]['name']; ?><br>
     </td>
     <td>
-        Price: <?php echo $items[$ino]["price"]; ?>
+        Price: <?php echo $items[$ino]["price"]; ?><br>
     </td>
     <td>
-        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button>
+        <form action='' method='post'>
+        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button><br><br>
+        </form>
     </td>
 </tr>
+
 <?php
+    //Calculate and display total
     $total += $items[$ino]['price'];
-} // end foreach
+}
 ?>
 
 Total: $<?php echo $total; ?>
 
-</body></html>
+</body>
+
+</body>

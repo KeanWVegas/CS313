@@ -18,14 +18,15 @@ $items = array (
 
 // Add Item
 if (isset ( $_POST ["add"] )) {
+    //add items in array to session cart
     if (!in_array($_POST ["add"], $_SESSION['cart'])) {
         $_SESSION ['cart'][] = $_POST["add"];
     }
 }
 
 // Remove Item
-if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
-    // Remove the item from the cart
+if (isset ( $_POST ['remove'] ))
+    //If remove is posted, search for item key and remove it
     if (false !== $key = array_search($_POST['remove'], $_SESSION['cart'])) {
         unset($_SESSION['cart'][$key]);
     }
@@ -61,7 +62,9 @@ if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
 
 <?php
 // Display cart items
+//Need to set base total
 $total = 0;
+//Loop through items, display, create remove button (assign item key value)
 foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
@@ -77,7 +80,9 @@ foreach ( $_SESSION['cart'] as $ino ) {
         </form>
     </td>
 </tr>
+
 <?php
+    //Calculate and display total
     $total += $items[$ino]['price'];
 }
 ?>
