@@ -40,6 +40,7 @@ else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
 <header>
     <h1>Sails for Sale</h1>
     <h2>Sell your sails at sale prices!</h2>
+    <h3 src="cart.php">Cart</h3>
 
 </header>
 
