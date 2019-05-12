@@ -14,9 +14,6 @@ session_start();
 
 <body>
 <?php 
-    foreach($_SESSION['address'] as $key => $value)
-{
-  echo $key.": ". $value;
-}
+   echo '<pre>' , var_dump($_SESSION['address']) , '</pre>';
     ?>
 </body>
