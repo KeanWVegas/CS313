@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$_SESSION['address'][] = $_POST['address']
 ?>
 <head>
     <title>Sail Sales Cart</title>
@@ -16,13 +16,13 @@ session_start();
     <h2> Please enter your shipping address</h2>
     <form action='confirmation.php' method='post'>
         Street Address:
-        <input type="text" name="street"><br>
+        <input type="text" name="address" value="address"><br>
         City:
-        <input type="text" name="city"><br>
+        <input type="text" name="address" value="address"><br>
         State:
-        <input type="text" name="state"><br>
+        <input type="text" name="address" value="address"><br>
         Zip Code:
-        <input type="text" name="zip"> <br>    
+        <input type="text" name="address" value="address"><br>    
         
         <input type="button" onclick="window.location.href = '/index.php';" value="Return Home"><br>
     
