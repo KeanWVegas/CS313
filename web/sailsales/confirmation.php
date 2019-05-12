@@ -14,6 +14,9 @@ session_start();
 
 <body>
 <?php 
-    print_r($_SESSION['address']);
+    foreach($_SESSION['address'] as $key => $value)
+{
+  echo $key.": ". $value;
+}
     ?>
 </body>
