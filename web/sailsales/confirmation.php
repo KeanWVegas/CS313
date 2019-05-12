@@ -14,6 +14,6 @@ session_start();
 
 <body>
 <?php 
-   echo '<pre>' , var_dump($_SESSION['address']) , '</pre>';
+   echo '<pre>' , var_dump($_SESSION['address'][]) , '</pre>';
     ?>
 </body>
