@@ -29,7 +29,7 @@ if (isset ( $_POST ["add"] )) {
 if (isset($_POST['remove'])) {
     $key=array_search($_GET['cart'],$_SESSION['cart']);
     if($key!==false)
-    unset($_SESSION['cart'][$key]);
+    unset($_SESSION['name'][$key]);
     $_SESSION["cart"] = array_values($_SESSION["cart"]);
 } 
 ?>
@@ -53,7 +53,7 @@ if (isset($_POST['remove'])) {
 
             echo " <p>$title</p>";
             echo "<p>\$$price</p>";
-            echo "<button type='submit' name='add' value='remove'>Add to Cart</button> ";
+            echo "<button type='submit' name='add' value='$ino'>Add to Cart</button> ";
         }
         ?>
 
