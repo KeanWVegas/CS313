@@ -25,10 +25,10 @@ if (isset ( $_POST ["add"] )) {
     }
 }
 
-// Delete Item
-else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
+// Remove Item
+else if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
     // Remove the item from the cart
-    if (false !== $key = array_search($_POST['delete'], $_SESSION['cart'])) {
+    if (false !== $key = array_search($_POST['remove'], $_SESSION['cart'])) {
         unset($_SESSION['cart'][$key]);
     }
 }
@@ -68,18 +68,18 @@ foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $items[$ino]['name']; ?>
+        Name: <?php echo $items[$ino]['name']; ?><br>
     </td>
     <td>
-        Price: <?php echo $items[$ino]["price"]; ?>
+        Price: <?php echo $items[$ino]["price"]; ?><br>
     </td>
     <td>
-        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button>
+        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button>
     </td>
 </tr>
 <?php
     $total += $items[$ino]['price'];
-} // end foreach
+}
 ?>
 
 Total: $<?php echo $total; ?>
