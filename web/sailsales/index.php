@@ -31,7 +31,11 @@ if (isset ( $_POST ['remove'] ))
         unset($_SESSION['cart'][$key]);
     }
 ?>
-
+<style>
+    #items {
+        border-style: solid;
+    }
+</style>
 <head>
     <title>Sail Sales Home</title>
 </head>
@@ -43,6 +47,7 @@ if (isset ( $_POST ['remove'] ))
 
 <body>
     <form action='' method='post'>
+        <div id="items">
         <?php
         foreach ( $items as $ino => $item ) {
             $title = $item ['name'];
@@ -53,7 +58,7 @@ if (isset ( $_POST ['remove'] ))
             echo "<button type='submit' name='add' value='$ino'>Add to Cart</button> ";
         }
         ?>
-
+        </div>
     </form>
 
 </body>
