@@ -5,11 +5,11 @@ $items = array (
     '001' => array (
         'name' => 'Yacht',
         'price' => '3.50'
-    )
+    ),
     '002' => array (
         'name' => 'Fishing Boat',
         'price' => '2.50'
-    )
+    ),
     '003' => array (
         'name' => 'Sail Boat',
         'price' => '1.50'
