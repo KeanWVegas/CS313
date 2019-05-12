@@ -30,7 +30,6 @@ if (isset ( $_POST ['remove'] ))
     if (false !== $key = array_search($_POST['remove'], $_SESSION['cart'])) {
         unset($_SESSION['cart'][$key]);
     }
-}
 ?>
 
 <head>
