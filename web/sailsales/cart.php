@@ -24,10 +24,10 @@ foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $items[$ino]['name']; ?><br>
+        Name: <?php echo $_SESSION['items'][$ino]['name']; ?><br>
     </td>
     <td>
-        Price: <?php echo $items[$ino]["price"]; ?><br>
+        Price: <?php echo $_SESSION['items'][$ino]["price"]; ?><br>
     </td>
     <td>
         <form action='' method='post'>
