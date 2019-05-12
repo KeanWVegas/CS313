@@ -30,15 +30,15 @@ foreach ( $_SESSION['cart'] as $additem ) {
         Name: <?php echo $_SESSION['items'][$additem]['name']; ?><br>
     </td>
     <td>
-        Price: <?php echo $_SESSION['items'][$additem]["price"]; ?><br>
+        Price: <?php echo $_SESSION['items'][$additem]["price"]; ?><br><br>
     </td>
 </tr>
 
 <?php
     //Calculate and display total
-    $total += $items[$additem]['price'];
+    $total += $_SESSION['items'][$additem]['price'];
 }
 ?>
 
-Total: $<?php echo $total; ?><br><br>
+<br>Total: $<?php echo $total; ?><br><br>
 </body>
