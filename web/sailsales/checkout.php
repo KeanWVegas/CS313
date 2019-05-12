@@ -14,7 +14,7 @@ session_start();
 
 <body>
     <h2> Please enter your shipping address</h2>
-    <form action='/confirmation.php' method='post'>
+    <form action='confirmation.php' method='post'>
         Street Address:
         <input type="text" name="street"><br>
         City:
@@ -24,7 +24,7 @@ session_start();
         Zip Code:
         <input type="text" name="zip"> <br>    
         
-        <input type="button" onclick="window.location.href = '/index.php';" value="return">Return Home</a><br>
+        <input type="button" onclick="window.location.href = '/index.php';" value="Return Home"><br>
     
         <button type="submit" name='submit' >Complete Checkout</button>
         
