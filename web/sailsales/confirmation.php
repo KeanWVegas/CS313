@@ -11,7 +11,9 @@ session_start();
     <h2>Sell your sails at sale prices!</h2>
 
 </header>
-
+<p> I was unable to figure out what I was doing wrong when trying to print my sessioned address array. As you can see, the array is 4 fields big, as indicated by the amount of addresses being displayed. Here is a snippet of my code in case you can see what I'm doing wrong: foreach($_SESSION['address'] as $key => $print) {
+                print "Address: ".$_SESSION['address']['street']. "<br>";
+            }</p>
 <body>
 <?php
             foreach($_SESSION['address'] as $key => $print) {
