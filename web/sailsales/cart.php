@@ -2,6 +2,12 @@
 
 session_start();
 
+// Remove Item
+if (isset ( $_POST ['remove'] ))
+    //If remove is posted, search for item key and remove it
+    if (false !== $key = array_search($_POST['remove'], $_SESSION['cart'])) {
+        unset($_SESSION['cart'][$key]);
+    }
 ?>
 <head>
     <title>Sail Sales Cart</title>
@@ -44,6 +50,6 @@ foreach ( $_SESSION['cart'] as $ino ) {
 
 Total: $<?php echo $total; ?><br><br>
     
-<button type="submit" name='submit' onclick="window.location.href = 'checkout.php';">Complete Checkout</button>
+<button onclick="window.location.href = 'checkout.php';">Complete Checkout</button>
 
 </body>
