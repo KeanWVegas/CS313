@@ -32,11 +32,6 @@ foreach ( $_SESSION['cart'] as $additem ) {
     <td>
         Price: <?php echo $_SESSION['items'][$additem]["price"]; ?><br>
     </td>
-    <td>
-        <form action='' method='post'>
-        <button type='submit' name='remove' value='<?php echo $additem; ?>'>Remove</button><br><br>
-        </form>
-    </td>
 </tr>
 
 <?php

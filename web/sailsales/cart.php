@@ -44,7 +44,7 @@ foreach ( $_SESSION['cart'] as $additem ) {
 
 <?php
     //Calculate and display total
-    $total += $items[$additem]['price'];
+    $total += $_SESSION['items'][$additem]['price'];
 }
 ?>
 
