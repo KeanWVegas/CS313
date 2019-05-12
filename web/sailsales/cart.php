@@ -42,6 +42,8 @@ foreach ( $_SESSION['cart'] as $ino ) {
 }
 ?>
 
-Total: $<?php echo $total; ?>
+Total: $<?php echo $total; ?><br><br>
+    
+<button type="submit" name='submit' onclick="window.location.href = '/checkout.php';">Complete Checkout</button>
 
 </body>

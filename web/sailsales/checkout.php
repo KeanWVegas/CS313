@@ -14,18 +14,20 @@ session_start();
 
 <body>
     <h2> Please enter your shipping address</h2>
-    <form action='' method='post'>
+    <form action='/confirmation.php' method='post'>
         Street Address:
-        <input type="text" name="street">
+        <input type="text" name="street"><br>
         City:
-        <input type="text" name="city">
+        <input type="text" name="city"><br>
         State:
-        <input type="text" name="state">
+        <input type="text" name="state"><br>
         Zip Code:
-        <input type="text" name="zip">      
-        <button type="submit" name='submit' onclick="window.location.href = '/confirmation.php';">Complete Checkout</button>
+        <input type="text" name="zip"> <br>    
         
-        <a href="index.php">Return Home</a>
+        <input type="button" onclick="window.location.href = '/index.php';" value="return">Return Home</a><br>
+    
+        <button type="submit" name='submit' >Complete Checkout</button>
+        
     </form>
     
 </body>
