@@ -36,6 +36,6 @@ if (isset($_POST['submit'])) {
         
     </form>
     <?php 
-        echo(array_values($SESSION['address']);
+        echo(array_values($SESSION['address'])
              ?>
 </body>
