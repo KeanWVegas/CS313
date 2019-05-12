@@ -26,7 +26,7 @@ if (isset ( $_POST ["add"] )) {
 }
 
 // Remove Item
-else if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
+if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
     // Remove the item from the cart
     if (false !== $key = array_search($_POST['remove'], $_SESSION['cart'])) {
         unset($_SESSION['cart'][$key]);
