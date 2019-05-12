@@ -14,7 +14,7 @@ $items = array (
         'name' => 'Sail Boat',
         'price' => '1.50'
     )
-)
+);
 
 // Add Item
 if (isset ( $_POST ["add"] )) {
