@@ -26,13 +26,13 @@ if (isset($_POST['submit'])) {
     <h2> Please enter your shipping address</h2>
     <form action='confirmation.php' method='post'>
         Street Address:
-        <input type="text" name="street"  onfocus="this.value=''"><br>
+        <input type="text" name="street" value="address" onfocus="this.value=''"><br>
         City:
-        <input type="text" name="city"  onfocus="this.value=''"><br>
+        <input type="text" name="city" value="address" onfocus="this.value=''"><br>
         State:
-        <input type="text" name="state"  onfocus="this.value=''"><br>
+        <input type="text" name="state" value="address" onfocus="this.value=''"><br>
         Zip Code:
-        <input type="text" name="zip"  onfocus="this.value=''"><br>    
+        <input type="text" name="zip" value="address" onfocus="this.value=''"><br>    
         <input type="button" onclick="window.location.href = 'index.php';" value="Return Home"><br>
     
         <button type="submit" name='submit' >Complete Checkout</button>
