@@ -56,36 +56,4 @@ if (isset ( $_POST ['remove'] ))
 
     </form>
 
-    
-<h1>Cart:</h1>
-
-<?php
-// Display cart items
-//Need to set base total
-$total = 0;
-//Loop through items, display, create remove button (assign item key value)
-foreach ( $_SESSION['cart'] as $ino ) {
-    ?>
-<tr>
-    <td>
-        Name: <?php echo $items[$ino]['name']; ?><br>
-    </td>
-    <td>
-        Price: <?php echo $items[$ino]["price"]; ?><br>
-    </td>
-    <td>
-        <form action='' method='post'>
-        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button><br><br>
-        </form>
-    </td>
-</tr>
-
-<?php
-    //Calculate and display total
-    $total += $items[$ino]['price'];
-}
-?>
-
-Total: $<?php echo $total; ?>
-
 </body>
