@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
         <input type="text" name="state" value="address" onfocus="this.value=''"><br>
         Zip Code:
         <input type="text" name="zip" value="address" onfocus="this.value=''"><br>    
-        <input type="button" onclick="window.location.href = 'index.php';" value="Return Home"><br>
+        <input type="button" onclick="window.location.href = 'cart.php';" value="Return to cart"><br>
     
         <button type="submit" name='submit' >Complete Checkout</button>
         
