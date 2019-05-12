@@ -45,12 +45,13 @@ else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
 
 <body>
     <form action="" method="post">
+        <?php
         foreach ( $items as $ino => $item ) {
             echo "<p>$item['name']</p>";
             echo "<p>$item['desc']</p>";
             echo "<p>\$$item['price']</p>";
         }
-
+        ?>
 
     </form>
 
