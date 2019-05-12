@@ -74,7 +74,7 @@ foreach ( $_SESSION['cart'] as $ino ) {
         Price: <?php echo $items[$ino]["price"]; ?><br>
     </td>
     <td>
-        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button><br>
+        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button><br><br>
     </td>
 </tr>
 <?php
