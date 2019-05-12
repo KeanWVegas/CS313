@@ -26,12 +26,12 @@ if (isset ( $_POST ["add"] )) {
 }
 
 // Remove Item
-if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
-    // Remove the item from the cart
-    if (false !== $key = array_search($_POST['remove'], $_SESSION['cart'])) {
-        unset($_SESSION['cart'][$key]);
-    }
-}
+if (isset($_POST['remove'])) {
+    $key=array_search($_GET['cart'],$_SESSION['cart']);
+    if($key!==false)
+    unset($_SESSION['cart'][$key]);
+    $_SESSION["cart"] = array_values($_SESSION["cart"]);
+} 
 ?>
 
 <head>
@@ -53,16 +53,17 @@ if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
 
             echo " <p>$title</p>";
             echo "<p>\$$price</p>";
-            echo "<button type='submit' name='add' value='$ino'>Add to Cart</button> ";
+            echo "<button type='submit' name='add' value='remove'>Add to Cart</button> ";
         }
         ?>
 
     </form>
 
     
-    <h1>Cart:</h1>
+<h1>Cart:</h1>
+
 <?php
-// Set a default total
+// Display cart items
 $total = 0;
 foreach ( $_SESSION['cart'] as $ino ) {
     ?>
