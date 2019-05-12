@@ -1,7 +1,7 @@
 <?php
 session_start ();
 
-$items = array (
+$_SESSION['items'] = $items = array (
     '001' => array (
         'name' => 'Yacht',
         'price' => '3.50'
