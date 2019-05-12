@@ -17,7 +17,7 @@ session_start();
 <body>
 <?php
             foreach($_SESSION['address'] as $key) {
-                echo key($_SESSION['address'])
+                echo key($_SESSION['address']);
             }
         ?>
 </body>
