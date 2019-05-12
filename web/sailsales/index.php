@@ -47,9 +47,11 @@ else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
     <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
         <?php
         foreach ( $items as $ino => $item ) {
-            echo "<p>$item['name']</p>";
-            echo "<p>$item['desc']</p>";
-            echo "<p>\$$item['price']</p>";
+            $title = $item ['name'];
+$price = $item ['price'];
+
+echo " <p>$title</p>";
+echo "<p>\$$price</p>";
         }
         ?>
 
