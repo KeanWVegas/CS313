@@ -45,7 +45,7 @@ if (isset ( $_POST ['remove'] )) { // a remove button has been clicked
 </header>
 
 <body>
-    <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
+    <form action='' method='post'>
         <?php
         foreach ( $items as $ino => $item ) {
             $title = $item ['name'];
