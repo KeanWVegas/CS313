@@ -48,10 +48,11 @@ else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
         <?php
         foreach ( $items as $ino => $item ) {
             $title = $item ['name'];
-$price = $item ['price'];
+            $price = $item ['price'];
 
-echo " <p>$title</p>";
-echo "<p>\$$price</p>";
+            echo " <p>$title</p>";
+            echo "<p>\$$price</p>";
+            echo "<button type='submit' name='add' value='$ino'>Add to Cart</button> ";
         }
         ?>
 
