@@ -17,8 +17,8 @@ session_start();
 <body>
 <?php
             foreach($_SESSION['address'] as $key => $print) {
-                print_r $_SESSION['address']['street'];
-                print_r $_SESSION['address']['city'];
+                print_r ($_SESSION['address']['street']);
+                print_r ($_SESSION['address']['city']);
             }
         ?>
 </body>
