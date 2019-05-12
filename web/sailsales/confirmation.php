@@ -11,14 +11,39 @@ session_start();
     <h2>Sell your sails at sale prices!</h2>
 
 </header>
-<p> I was unable to figure out what I was doing wrong when trying to print my sessioned address array. As you can see, the array is 4 fields big, as indicated by the amount of addresses being displayed. Here is a snippetmy code in case you can see what I'm doing wrong: foreach($_SESSION['address'] as $key => $print) {
-                print "Address: ".$_SESSION['address']['street']. "<br>";
-            }</p>
+
 <body>
 <?php
-            foreach($_SESSION['address'] as $key => $print) {
+    foreach($_SESSION['address'] as $key => $print) {
                 print_r ($_SESSION['address']['street']);
                 print_r ($_SESSION['address']['city']);
             }
-        ?>
+    
+// Display cart items
+//Need to set base total
+$total = 0;
+//Loop through items, display, create remove button (assign item key value)
+foreach ( $_SESSION['cart'] as $additem ) {
+    ?>
+<tr>
+    <td>
+        Name: <?php echo $_SESSION['items'][$additem]['name']; ?><br>
+    </td>
+    <td>
+        Price: <?php echo $_SESSION['items'][$additem]["price"]; ?><br>
+    </td>
+    <td>
+        <form action='' method='post'>
+        <button type='submit' name='remove' value='<?php echo $additem; ?>'>Remove</button><br><br>
+        </form>
+    </td>
+</tr>
+
+<?php
+    //Calculate and display total
+    $total += $items[$additem]['price'];
+}
+?>
+
+Total: $<?php echo $total; ?><br><br>
 </body>
