@@ -68,10 +68,10 @@ foreach ( $_SESSION['cart'] as $ino ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $items[$ino]['name']; ?>
+        Name: <?php echo $items[$ino]['name']; ?><br>
     </td>
     <td>
-        Price: <?php echo $items[$ino]["price"]; ?>
+        Price: <?php echo $items[$ino]["price"]; ?><br>
     </td>
     <td>
         <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button>
