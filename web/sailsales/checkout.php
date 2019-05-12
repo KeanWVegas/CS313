@@ -33,8 +33,10 @@ if (isset($_POST['submit'])) {
         <input type="button" onclick="window.location.href = 'index.php';" value="Return Home"><br>
     
         <button type="submit" name='submit' >Complete Checkout</button>
-        <?php 
-            echo(array_values($SESSION['address'])
+        <?php
+            foreach($_SESSION['address'] as $result) {
+                echo $_SESSION['address']['street'], '<br>';
+            }
         ?>
     </form>
 </body>
