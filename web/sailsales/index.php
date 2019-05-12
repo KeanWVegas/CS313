@@ -45,13 +45,13 @@ if (isset ( $_POST ['remove'] ))
     <form action='' method='post'>
 
         <?php
-        foreach ( $items as $ino => $item ) {
+        foreach ( $items as $additem => $item ) {
             $title = $item ['name'];
             $price = $item ['price'];
 
             echo " <p>$title</p>";
             echo "<p>\$$price</p>";
-            echo "<button type='submit' name='add' value='$ino'>Add to Cart</button> ";
+            echo "<button type='submit' name='add' value='$additem'>Add to Cart</button> ";
         }
         ?>
     </form>

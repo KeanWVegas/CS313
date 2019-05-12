@@ -26,25 +26,25 @@ if (isset ( $_POST ['remove'] ))
 //Need to set base total
 $total = 0;
 //Loop through items, display, create remove button (assign item key value)
-foreach ( $_SESSION['cart'] as $ino ) {
+foreach ( $_SESSION['cart'] as $additem ) {
     ?>
 <tr>
     <td>
-        Name: <?php echo $_SESSION['items'][$ino]['name']; ?><br>
+        Name: <?php echo $_SESSION['items'][$additem]['name']; ?><br>
     </td>
     <td>
-        Price: <?php echo $_SESSION['items'][$ino]["price"]; ?><br>
+        Price: <?php echo $_SESSION['items'][$additem]["price"]; ?><br>
     </td>
     <td>
         <form action='' method='post'>
-        <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button><br><br>
+        <button type='submit' name='remove' value='<?php echo $additem; ?>'>Remove</button><br><br>
         </form>
     </td>
 </tr>
 
 <?php
     //Calculate and display total
-    $total += $items[$ino]['price'];
+    $total += $items[$additem]['price'];
 }
 ?>
 
