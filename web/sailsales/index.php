@@ -18,9 +18,7 @@ $items = array (
 
 // Add Item
 if (isset ( $_POST ["add"] )) {
-    // Check the item is not already in the cart
     if (!in_array($_POST ["add"], $_SESSION['cart'])) {
-        // Add new item to cart
         $_SESSION ['cart'][] = $_POST["add"];
     }
 }
@@ -41,7 +39,6 @@ if (isset($_POST['remove'])) {
     <h1>Sails for Sale</h1>
     <h2>Sell your sails at sale prices!</h2>
     <a href="cart.php">Cart</a>
-
 </header>
 
 <body>
@@ -75,7 +72,9 @@ foreach ( $_SESSION['cart'] as $ino ) {
         Price: <?php echo $items[$ino]["price"]; ?><br>
     </td>
     <td>
+        <form action='' method='post'>
         <button type='submit' name='remove' value='<?php echo $ino; ?>'>Remove</button><br><br>
+        </form>
     </td>
 </tr>
 <?php
