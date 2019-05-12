@@ -13,3 +13,7 @@ session_start();
 </header>
 
 <body>
+<?php 
+    print_r($_SESSION['address']);
+    ?>
+</body>
