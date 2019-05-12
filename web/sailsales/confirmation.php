@@ -13,7 +13,9 @@ session_start();
 </header>
 
 <body>
-<?php 
-   echo '<pre>' , var_dump($_SESSION['address'][]) , '</pre>';
-    ?>
+<?php
+            foreach($_SESSION['address'] as $result) {
+                echo $_SESSION['address']['street'], '<br>';
+            }
+        ?>
 </body>
