@@ -23,7 +23,7 @@
         }   
     
         echo "<table>";
-        while($row = pg_fetch_row($result)) {
+        while($row = pg_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td align='center' width='200'>" . $row[0] . "</td>";
             echo "<td align='center' width='200'>" . $row[1] . "</td>";
