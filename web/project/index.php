@@ -29,11 +29,10 @@
             echo "<td align='center' width='200'>" . $row['name'] . "</td>";
             echo "</tr>";
             echo "</table>";
-            
+        }
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
-        }
     ?>
 </body>
 </html>
