@@ -24,8 +24,8 @@
     
         echo "<table>";
             echo "<tr>";
-                echo "<td align='center width='200'>ID</td>";
-                echo "<td align='center width='200'>Name</td>";
+                echo "<td align='center' width='200'>ID</td>";
+                echo "<td align='center' width='200'>Name</td>";
             echo "</tr>";
     
         while($row = pg_fetch_assoc($result)) {
