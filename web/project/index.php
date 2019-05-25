@@ -16,7 +16,8 @@
             exit;
         }    
     
-        $result = pg_query($db, "SELECT * FROM public.users");
+        $result = pg_query($db, "SELECT * FROM public.users
+                                SELECT * FROM public.lists");
         if (!result) {
             echo "An error occured in querying the database\n";
             exit;
