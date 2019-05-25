@@ -16,7 +16,7 @@
             exit;
         }    
     
-        $result = pg_query($db, "SELECT * FROM public.users INNER JOIN public.lists ON public.users public_users.pka = public_lists.pka");
+        $result = pg_query($db, "SELECT * FROM public.users SELECT * FROM public.lists");
         if (!result) {
             echo "An error occured in querying the database\n";
             exit;
