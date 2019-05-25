@@ -33,6 +33,7 @@
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $row['id'] . "</td>";
                     echo "<td align='center' width='200'>" . $row['name'] . "</td>";
+                    echo "<td align='center' width='200'>" . $row['list'] . "</td>";
                 echo "</tr>";
         }
         echo "</table>";
