@@ -28,7 +28,7 @@
     </form>
     <?php
         
-        $insertquery = "INSERT INTO lists (status, item, userid) VALUES ('$_POST['status']']', '$_POST['item']')";
+        $insertquery = "INSERT INTO lists (status, item, userid) VALUES ('$_POST[status]']', '$_POST[item]')";
         $insertresult = pg_query($insertquery);
         $result = pg_query($db, "SELECT * FROM public.lists");
     
