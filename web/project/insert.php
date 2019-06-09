@@ -12,15 +12,11 @@
         $status = htmlspecialchars($_POST['status']);
         $item = htmlspecialchars($_POST['item']);
         
-        $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
-        
-        $stmt = $db->prepare($insertquery);
+        $insertquery = $db->prepare("INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)");
     
         $stmt->bindValue(':status', $status, PDO::PARAM_STR);
         $stmt->bindValue(':item', $item, PDO::PARAM_STR);
         $stmt->execute();
-        
-        
         
         $new_page = "items.php";
         header("Location: $new_page");
