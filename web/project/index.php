@@ -20,8 +20,9 @@ $userid = $_SESSION["user_id"];
             echo "An error occured in connecting to the database\n";
             exit;
         }     
-    
-        $result = pg_query($db, "SELECT * FROM public.lists");    
+        
+        $query = 'SELECT * FROM public.lists';
+        $result = pg_query($query);
         if (!result) {
             echo "An error occured in querying the database\n";
             exit;
@@ -34,7 +35,7 @@ $userid = $_SESSION["user_id"];
                 echo "<td align='center' width='200'>Name</td>";
             echo "</tr>";
     
-        while($row = pg_fetch_assoc($result)) {
+        while($row = pg_fetch_row($result)) {
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $row['id'] . "</td>";
                     echo "<td align='center' width='200'>" . $row['status'] . "</td>";
