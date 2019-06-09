@@ -8,9 +8,7 @@
         $status = htmlspecialchars($_GET['status']);
         $item = htmlspecialchars($_GET['item']);
         
-        $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item)";
-
-        $stmt = $db->prepare($insertquery);
+        $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
         
         $stmt->bindValue(':status', $status, PDO::PARAM_STR);
         $stmt->bindValue(':item', $item, PDO::PARAM_STR);
