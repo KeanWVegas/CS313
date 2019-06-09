@@ -6,7 +6,7 @@ $userid = $_SESSION["user_id"];
 <html>
 
 <head>
-    <title>Grocery Sorcery</title>
+    <title>Grocery Test</title>
 </head>
 
 <body>
