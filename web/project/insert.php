@@ -13,8 +13,12 @@
         $stmt->bindValue(':status', $status, PDO::PARAM_STR);
         $stmt->bindValue(':item', $item, PDO::PARAM_STR);
         $stmt->execute();
-
+        
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+        
         $new_page = "items.php";
-header("Location: $new_page");
-die();
+        header("Location: $new_page");
+        die();
     ?>
