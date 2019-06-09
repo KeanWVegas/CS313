@@ -2,7 +2,6 @@
 session_start();
 $userid = $_SESSION["user_id"];
 
-
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +21,7 @@ $userid = $_SESSION["user_id"];
             exit;
         }     
     
-        $result = pg_query($db, "SELECT * FROM public.lists WHERE userid = 2");    
+        $result = pg_query($db, "SELECT * FROM public.lists");    
         if (!result) {
             echo "An error occured in querying the database\n";
             exit;
