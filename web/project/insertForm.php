@@ -4,6 +4,6 @@
             echo "An error occured in connecting to the database\n";
             exit;
         }  
-        $insertQuery = 'INSERT INTO lists (status, item, userid) VALUES ('$_POST[status]', '$_POST[item]', '$_POST[userid]')';
+        $insertQuery = pg_query('INSERT INTO lists (status, item, userid) VALUES ('$_POST[status]', '$_POST[item]', '$_POST[userid]')');
          
     ?>
