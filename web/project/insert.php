@@ -5,9 +5,16 @@
             exit;
         } 
         
-        $insertquery = "INSERT INTO lists (status, item, userid) VALUES ('$_POST[status]']', '$_POST[item]')";
-        $insertquery = pg_query($insertquery);
-        $insertquery->execute();
+        $status = htmlspecialchars($_GET['status']);
+        $item = htmlspecialchars($_GET['item']);
+        
+        $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item)";
+
+        $stmt = $db->prepare($insertquery);
+        
+        $stmt->bindValue(':status', $status, PDO::PARAM_STR);
+        $stmt->bindValue(':item', $item, PDO::PARAM_STR);
+        $stmt->execute();
 
         $new_page = "items.php";
 header("Location: $new_page");
