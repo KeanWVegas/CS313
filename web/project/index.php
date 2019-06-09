@@ -17,13 +17,13 @@
     <h1>Grocery Sorcery</h1>
     <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
     
-    <form name="insert" method="post" action="insertForm.php">
+    <form name="insert" method="POST" action="insertForm.php">
         <select name='status'>
             <option value='need' selected>Need</option>
             <option value='cart'>Cart</option>
             <option value='have'>Have</option>
         </select>
-        <input type="text" value="Item Name">
+        <input type="text" value="Item Name" onfocus="">
         <input type="submit" value='Submit'>
     </form>
     <?php
