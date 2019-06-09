@@ -14,7 +14,7 @@
         
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
         
-        $stmt = $db->prepare($sql);
+        $stmt = $db->prepare($insertquery);
     
         $stmt->bindValue(':status', $status, PDO::PARAM_STR);
         $stmt->bindValue(':item', $item, PDO::PARAM_STR);
