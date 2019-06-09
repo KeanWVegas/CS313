@@ -6,7 +6,10 @@
         } 
         
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES ('$_POST[status]']', '$_POST[item]')";
-        $result = pg_query($insertquery);
-        /*$insertQuery = pg_query('INSERT INTO lists (status, item, userid) VALUES ('$_POST[status]', '$_POST[item]', '$_POST[userid]')');*/
-         
+        $insertquery = pg_query($insertquery);
+        $insertquery->execute();
+
+        $new_page = "items.php";
+header("Location: $new_page");
+die();
     ?>
