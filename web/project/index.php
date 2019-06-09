@@ -17,7 +17,7 @@
     <h1>Grocery Sorcery</h1>
     <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
     
-    <form name="insert" method="POST" action="insertForm.php">
+    <form name="insert" method="POST" action="">
         <select name='status'>
             <option value='need' selected>Need</option>
             <option value='cart'>Cart</option>
@@ -25,9 +25,25 @@
         </select>
         <input type="text" value="Item Name" onfocus="">
         <input type="submit" value='Submit'>
+        <?php 
+            if (isset($result)) {
+            echo "<p>Added to list!</p>"
+            }
+        ?>
     </form>
     <?php
         
+        function insertForm($status, $item, $userid) {
+            return $status, $item, $userid;
+            
+        }
+    
+        if (isset($_POST['status']) && isset($_POST['item'])) {
+            $insertResult = 'success';
+        }
+    
+        
+    
         $result = pg_query($db, "SELECT * FROM public.lists");
     
         if (!result) {
