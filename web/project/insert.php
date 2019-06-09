@@ -6,7 +6,7 @@
         } 
         
         //$status = $_POST[status];
-        echo $_GET[status];
+        echo $_GET['status'];
         /*
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES ('$_POST['status']']', '$_POST['item']')";
         $result = pg_query($insertquery);*/
