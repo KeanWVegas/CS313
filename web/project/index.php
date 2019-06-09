@@ -17,7 +17,7 @@
     <h1>Grocery Sorcery</h1>
     <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
     
-    <form name="insert" method="POST" action="insert.php">
+    <form name="insert" method="POST" action="">
         <select name='status'>
             <option value='need' selected>Need</option>
             <option value='cart'>Cart</option>
@@ -28,6 +28,8 @@
     </form>
     <?php
         
+        $insertquery = "INSERT INTO lists (status, item, userid) VALUES ('$_POST['status']']', '$_POST['item']')";
+        $insertresult = pg_query($insertquery);
         $result = pg_query($db, "SELECT * FROM public.lists");
     
         if (!result) {
