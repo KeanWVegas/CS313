@@ -11,7 +11,9 @@
         
         $status = htmlspecialchars($_POST['status']);
         $item = htmlspecialchars($_POST['item']);
+echo $item;
         
+/*
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
     
         $stmt = $db->prepare($insertquery);
@@ -22,5 +24,5 @@
         
         $new_page = "items.php";
         header("Location: $new_page");
-        die();
+        die();*/
     ?>
