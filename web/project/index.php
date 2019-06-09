@@ -25,11 +25,6 @@
         </select>
         <input type="text" value="Item Name" onfocus="">
         <input type="submit" value='Submit'>
-        <?php 
-            if (isset($result)) {
-            echo "<p>Added to list!</p>"
-            }
-        ?>
     </form>
     <?php
         
