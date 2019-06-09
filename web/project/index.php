@@ -33,17 +33,6 @@
     </form>
     <?php
         
-        function insertForm($status, $item, $userid) {
-            return $status, $item, $userid;
-            
-        }
-    
-        if (isset($_POST['status']) && isset($_POST['item'])) {
-            $insertResult = 'success';
-        }
-    
-        
-    
         $result = pg_query($db, "SELECT * FROM public.lists");
     
         if (!result) {
