@@ -23,7 +23,7 @@
             <option value='cart'>Cart</option>
             <option value='have'>Have</option>
         </select>
-        <input type="text" value="Item Name" onfocus="this.value=''">
+        <input type="text" name='item' value="Item Name" onfocus="this.value=''">
         <input type="submit" value='Submit'>
     </form>
     <?php
