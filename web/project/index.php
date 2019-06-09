@@ -32,6 +32,7 @@
         while($row = pg_fetch_assoc($resultusers)) {
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $row['id'] . "</td>";
+                    echo "<td align='center' width='200'>" . $row['status'] . "</td>";
                     echo "<td align='center' width='200'>" . $row['item'] . "</td>";
                 echo "</tr>";
         }
