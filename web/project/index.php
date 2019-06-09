@@ -16,7 +16,7 @@
             exit;
         }     
     
-        $resultusers = pg_query($db, "SELECT * FROM public.users");
+        $resultusers = pg_query($db, "SELECT * FROM public.lists");
     
         if (!result) {
             echo "An error occured in querying the database\n";
@@ -32,7 +32,7 @@
         while($row = pg_fetch_assoc($resultusers)) {
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $row['id'] . "</td>";
-                    echo "<td align='center' width='200'>" . $row['name'] . "</td>";
+                    echo "<td align='center' width='200'>" . $row['item'] . "</td>";
                 echo "</tr>";
         }
         echo "</table>";
