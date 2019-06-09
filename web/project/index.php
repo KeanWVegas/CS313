@@ -17,7 +17,7 @@
     <h1>Grocery Sorcery</h1>
     <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
     
-    <form name="insert" method="POST" action="">
+    <form name="insert" method="POST" action="insertForm.php">
         <select name='status'>
             <option value='need' selected>Need</option>
             <option value='cart'>Cart</option>
