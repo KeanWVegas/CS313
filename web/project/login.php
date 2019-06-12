@@ -1,7 +1,9 @@
 <?PHP
-try{
     session_start();
     $name = $_POST["username"];
+    
+    require ("dbConnect.php");
+
     $db = get_db();
 //select userid from user table where id=:id 
     
@@ -11,14 +13,8 @@ try{
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $_SESSION["userid"] = $rows[0]['id'];}
-catch (Exception $ex)
-{
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
-	echo "Error with DB. Details: $ex";
-	die();
-}
+    $_SESSION["userid"] = $rows[0]['id'];
+
 ?>
 <!DOCTYPE html>
 <html>
