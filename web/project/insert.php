@@ -13,7 +13,7 @@
         $item = htmlspecialchars($_POST['item']);
 echo $item;
         
-/*
+
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
     
         $stmt = $db->prepare($insertquery);
@@ -22,7 +22,7 @@ echo $item;
         $stmt->bindValue(':item', $item, PDO::PARAM_STR);
         $stmt->execute();
         
-        $new_page = "items.php";
+        $new_page = "index.php";
         header("Location: $new_page");
         die();*/
     ?>
