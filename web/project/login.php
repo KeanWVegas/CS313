@@ -15,7 +15,7 @@
     $name = $_POST["name"];
     $stmt = $db->prepare('SELECT id FROM users WHERE name=:name');
 
-    $stmt->bindValue(':name, $name');
+    $stmt->bindValue(':name', $name);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
