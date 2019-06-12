@@ -5,7 +5,7 @@ $name = $_POST["username"];
 $db = get_db();
 //select userid from user table where id=:id 
     
-    $stmt = $db->prepare('SELECT * FROM users WHERE name=:name');
+    $stmt = $db->prepare('SELECT id FROM users WHERE name=:name');
 
     $stmt->bindValue(':name, $name');
     $stmt->execute();
