@@ -22,7 +22,7 @@ catch (Exception $ex)
 ?>
 <!DOCTYPE html>
 <html>
-    <form name='login' method="POST">
+    <form name='login' method="POST" action="">
         <input name="username" type="text">
         <input type='submit'>
     </form>
