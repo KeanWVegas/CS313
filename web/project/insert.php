@@ -16,8 +16,8 @@
     
         $stmt = $db->prepare($insertquery);
 
-        $stmt->bindValue(':status', $status, PDO::PARAM_STR);
-        $stmt->bindValue(':item', $item, PDO::PARAM_STR);
+        $stmt->bindValue(':status', $status);
+        $stmt->bindValue(':item', $item);
         $stmt->execute();
         
         $new_page = "index.php";
