@@ -41,10 +41,6 @@ ini_set('display_errors', 1);
         $result->execute();
         
         $items = $result->fetchAll(PDO::FETCH_ASSOC);
-        if (!result) {
-            echo "An error occured in querying the database\n";
-            exit;
-        }   
     
         echo "<table>";
             echo "<tr>";
