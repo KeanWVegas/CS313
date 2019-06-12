@@ -40,6 +40,7 @@ ini_set('display_errors', 1);
         $result->bindValue(':id', $id);
         $result->execute();
         
+        $items = $result->fetchAll(PDO::FETCH_ASSOC);
         if (!result) {
             echo "An error occured in querying the database\n";
             exit;
@@ -51,7 +52,7 @@ ini_set('display_errors', 1);
                 echo "<td align='center' width='200'>Item</td>";
             echo "</tr>";
     
-                $items = $result->fetchAll(PDO::FETCH_ASSOC);
+                
                 foreach ($items as $item)
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $row['status'] . "</td>";
