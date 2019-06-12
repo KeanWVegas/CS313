@@ -10,9 +10,7 @@
         } 
         
         $status = htmlspecialchars($_POST['status']);
-        $item = htmlspecialchars($_POST['item']);
-echo $item;
-        
+        $item = htmlspecialchars($_POST['item']);        
 
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
     
