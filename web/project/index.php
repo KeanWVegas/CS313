@@ -30,10 +30,10 @@
     <?php
         
         $id = $_SESSION['userid'];
-    
+        
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
     
-        $result->bindValue(':id, $id');
+        $result->bindValue(':id', $id);
         $result->execute();
         
         if (!result) {
