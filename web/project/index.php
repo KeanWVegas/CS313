@@ -47,7 +47,8 @@
                 echo "<td align='center' width='200'>Item</td>";
             echo "</tr>";
     
-        while($row = pg_fetch_assoc($result)) {
+                $items = $result->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($items as $item)
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $row['status'] . "</td>";
                     echo "<td align='center' width='200'>" . $row['item'] . "</td>";
