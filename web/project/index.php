@@ -31,7 +31,35 @@ ini_set('display_errors', 1);
         <input type="text" name='item' value="Item Name" onfocus="this.value=''">
         <input type="submit" value='Submit'>
     </form>
-
+    <?php
+        
+        $id = $_SESSION['userid'];
+        
+        $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
+    
+        $result->bindValue(':id', $id);
+        $result->execute();
+        
+        $items = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+        echo "<table>";
+            echo "<tr>";
+                echo "<td align='center' width='200'>Status</td>";
+                echo "<td align='center' width='200'>Item</td>";
+            echo "</tr>";
+    
+                
+                foreach ($items as $item){
+                echo "<tr>";
+                    echo "<td align='center' width='200'>" . $row['status'] . "</td>";
+                    echo "<td align='center' width='200'>" . $row['item'] . "</td>";
+                echo "</tr>";
+        }
+        echo "</table>";
+    
+    
+            
+    ?>
           
 </body>
 </html>
