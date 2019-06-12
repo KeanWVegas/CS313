@@ -51,8 +51,8 @@ ini_set('display_errors', 1);
                 
                 foreach ($items as $item){
                 echo "<tr>";
-                    echo "<td align='center' width='200'>" . $row['status'] . "</td>";
-                    echo "<td align='center' width='200'>" . $row['item'] . "</td>";
+                    echo "<td align='center' width='200'>" . $item['status'] . "</td>";
+                    echo "<td align='center' width='200'>" . $item['item'] . "</td>";
                 echo "</tr>";
         }
         echo "</table>";
