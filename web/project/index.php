@@ -3,6 +3,8 @@
     $db = get_db();   
 
     session_start();
+
+    echo $_SESSION['userid'];
 ?>
 
 <!DOCTYPE html>
