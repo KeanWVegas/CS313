@@ -8,13 +8,13 @@
         require ("dbConnect.php");
 
         $db = get_db();
-
+try{
         $status = htmlspecialchars($_POST['status']);
         $item = htmlspecialchars($_POST['item']); 
         $id = $_SESSION['userid'];       
         
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, :id)";
-try{
+
         $stmt = $db->prepare($insertquery);
 
         $stmt->bindValue(':status', $status);
