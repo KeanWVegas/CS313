@@ -20,7 +20,7 @@ try{
         $stmt->bindValue(':status', $status);
         $stmt->bindValue(':item', $item);
         $stmt->bindValue(':id', $id);
-        $stmt->execute();}
+        $stmt->execute();
         
         header("Location: index.php");
         die();
