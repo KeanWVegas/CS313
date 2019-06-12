@@ -11,16 +11,17 @@
         
         $status = htmlspecialchars($_POST['status']);
         $item = htmlspecialchars($_POST['item']);        
-
+        
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, 3)";
-    
+try{
         $stmt = $db->prepare($insertquery);
 
         $stmt->bindValue(':status', $status);
         $stmt->bindValue(':item', $item);
-        $stmt->execute();
+        $stmt->execute();}
         
+catch{
         $new_page = "index.php";
         header("Location: $new_page");
-        die();*/
+        die();*/}
     ?>
