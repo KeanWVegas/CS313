@@ -2,7 +2,7 @@
     session_start();
     $name = $_POST["username"];
     
-    require ("dbConnect.php");
+    require("dbConnect.php");
 
     $db = get_db();
 //select userid from user table where id=:id 
