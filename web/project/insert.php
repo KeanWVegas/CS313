@@ -10,7 +10,8 @@
         $db = get_db();
 
         $status = htmlspecialchars($_POST['status']);
-        $item = htmlspecialchars($_POST['item']); $id = $_SESSION['userid'];       
+        $item = htmlspecialchars($_POST['item']); 
+        $id = $_SESSION['userid'];       
         
         $insertquery = "INSERT INTO lists (status, item, userid) VALUES (:status, :item, :id)";
 try{
