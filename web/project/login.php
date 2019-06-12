@@ -20,4 +20,6 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $_SESSION["userid"] = $rows[0]['id'];
+
+    echo $_SESSION['userid'];
 ?>
