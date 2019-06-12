@@ -20,8 +20,12 @@ try{
         $stmt->bindValue(':item', $item);
         $stmt->execute();}
         
-catch{
-        $new_page = "index.php";
-        header("Location: $new_page");
-        die();*/}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
+}
+
     ?>
