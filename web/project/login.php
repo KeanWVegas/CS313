@@ -21,5 +21,6 @@
 
     $_SESSION["userid"] = $rows[0]['id'];
 
-    echo $_SESSION['userid'];
+    header("Location: index.php");
+    die();
 ?>
