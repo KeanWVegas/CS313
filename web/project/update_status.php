@@ -15,7 +15,7 @@ $db = get_db();
 
 
 
-$sql = 'UPDATE items '
+$sql = 'UPDATE lists '
 
         . 'SET status = :status '
 
