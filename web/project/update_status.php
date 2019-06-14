@@ -15,11 +15,10 @@ $db = get_db();
 
 
 if ($status = 'Remove') {
-$sql = 'DELETE FROM lists WHERE item = :item';
+$sql = 'DELETE FROM lists WHERE item = :itemname';
 
 $stmt = $db->prepare($sql);
 
-$stmt->bindValue(':status', $status, PDO::PARAM_STR);
 $stmt->bindValue(':itemname', $item, PDO::PARAM_INT);
 
 $stmt->execute();
