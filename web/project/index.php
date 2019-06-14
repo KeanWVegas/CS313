@@ -51,7 +51,7 @@ ini_set('display_errors', 1);
                 
                 foreach ($items as $item){
                     
-                   $itemname = $item['name'];
+                   $itemname = $item['item'];
 
                    $status = $item['status'];
 
@@ -61,9 +61,9 @@ ini_set('display_errors', 1);
                     echo "<td align='center' width='200'>" . $item['item'] . "</td>";
                     echo "<td align='center' width='200'>";
                         echo "<select>";
-                            echo "<option value='Need'>$status <a href='update_status.php?status=Need&itemname=$itemname'>Need</a></option>";
-                            echo "<option value='Cart'>$status <a href='update_status.php?status=Cart&itemname=$itemname'>Cart</a></option>";
-                            echo "<option value='Have'>$status <a href='update_status.php?status=Have&itemname=$itemname'>Have</a></option>";
+                            echo "<option>$status <a href='update_status.php?status=Need&itemname=$itemname'>Need</a></option>";
+                            echo "<option>$status <a href='update_status.php?status=Cart&itemname=$itemname'>Cart</a></option>";
+                            echo "<option>$status <a href='update_status.php?status=Have&itemname=$itemname'>Have</a></option>";
                         echo "</select>";
                     echo "</td>";
                 echo "</tr>";
