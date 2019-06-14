@@ -70,13 +70,11 @@
                    </div>
                </div>
            </div>
-       </div>
-";
+       </div>";
+            ?>
         }
         else {
-            $name = $_POST['name'];
-            echo "Welcome, " . $name;
-            
+                        
         }
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
     
