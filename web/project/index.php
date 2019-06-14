@@ -74,7 +74,7 @@
 ";
         }
         else {
-            $name = $_GET('name');
+            $name = $_GET['name'];
             echo "Welcome, " . $name;
             
         }
