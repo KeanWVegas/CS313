@@ -73,9 +73,7 @@
        </div>";
             ?>
         }
-        else {
-                        
-        }
+        
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
     
         $result->bindValue(':id', $id);
