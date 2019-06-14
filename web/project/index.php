@@ -71,7 +71,7 @@
                </div>
            </div>
        </div>";
-            
+            die();
         }
         
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
