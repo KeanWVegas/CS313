@@ -90,6 +90,10 @@
         
         $id = $_SESSION['userid'];
         
+        if (!id)  {
+            echo "Please sign in to continue:";
+            
+        }
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
     
         $result->bindValue(':id', $id);
