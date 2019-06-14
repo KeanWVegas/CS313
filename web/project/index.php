@@ -43,11 +43,11 @@
         $id = $_SESSION['userid'];
         
         if (!isset($id)) {
-            echo "Please sign in to continue:";
+            echo "Please sign in to continue";
 
         }
         else {
-            echo "Welcome, " $userid;
+            echo "Welcome, " $id;
             
         }
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
