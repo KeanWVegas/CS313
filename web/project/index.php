@@ -61,9 +61,11 @@
                     echo "<td align='center' width='200'>" . $item['item'] . "</td>";
                     echo "<td align='center' width='200'>";
                         echo "<select onchange='location = this.value;'>";
+                            echo "<option value=' '>Status</option>";
                             echo "<option value='update_status.php?status=Need&itemname=$itemname'>Need</option>";
                             echo "<option value='update_status.php?status=Cart&itemname=$itemname'>Cart</option>";
                             echo "<option value='update_status.php?status=Have&itemname=$itemname'>Have</option>";
+                            echo "<option value='update_status.php?status=Remove&itemname=$itemname'>Remove</option>";
                         echo "</select>";
                     echo "</td>";
                 echo "</tr>";

@@ -14,7 +14,19 @@ require('dbConnect.php');
 $db = get_db();
 
 
+if ($status = 'Remove') {
+$sql = 'DELETE FROM lists WHERE item = :item';
 
+$stmt = $db->prepare($sql);
+
+$stmt->bindValue(':status', $status, PDO::PARAM_STR);
+$stmt->bindValue(':itemname', $item, PDO::PARAM_INT);
+
+$stmt->execute();
+}
+
+
+else {
 $sql = 'UPDATE lists '
 
         . 'SET status = :status '
@@ -32,8 +44,7 @@ $stmt->bindValue(':status', $status, PDO::PARAM_STR);
 $stmt->bindValue(':itemname', $item, PDO::PARAM_INT);
 
 $stmt->execute();
-
- 
+}
 
 echo $stmt->rowCount();
 
