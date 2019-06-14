@@ -1,6 +1,6 @@
 <?php
 
-$id = htmlspecialchars($_GET['id']);
+$id = htmlspecialchars($_GET['itemname']);
 
 $status = htmlspecialchars($_GET['status']);
 
@@ -26,7 +26,7 @@ $stmt = $db->prepare($sql);
 
 $stmt->bindValue(':status', $status, PDO::PARAM_STR);
 
-$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+$stmt->bindValue(':itemname', $item, PDO::PARAM_INT);
 
 $stmt->execute();
 
@@ -36,7 +36,7 @@ echo $stmt->rowCount();
 
 
 
-$new_page = "items.php";
+$new_page = "index.php";
 
 header("Location: $new_page");
 
