@@ -42,6 +42,7 @@
         
         $id = $_SESSION['userid'];
         
+    
         if (!$id) {
             echo "Please sign in to continue";
             echo "   <div class='container'>
@@ -73,7 +74,8 @@
 ";
         }
         else {
-            echo "Welcome, " . $id;
+            $name = $_GET('name');
+            echo "Welcome, " . $name;
             
         }
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
