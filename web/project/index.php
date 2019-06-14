@@ -59,7 +59,10 @@
                        <h4 class='modal-title'>Modal Header</h4>
                    </div>
                    <div class='modal-body'>
-                       <p>Some text in the modal.</p>
+                       <form name='login' method='POST' action='login.php'>
+        <input name='name' type='text'>
+        <input type='submit'>
+    </form>
                    </div>
                    <div class='modal-footer'>
                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
