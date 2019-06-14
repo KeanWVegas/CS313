@@ -90,7 +90,7 @@
         
         $id = $_SESSION['userid'];
         
-        if (!id)  {
+        if (!isset(id) {
             echo "Please sign in to continue:";
             
         }
