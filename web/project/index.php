@@ -8,7 +8,6 @@
 
     session_start();
 
-    echo $_SESSION['userid'];
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +23,9 @@
     
     <form name="insert" method="POST" action="insert.php">
         <select name='status'>
-            <option value='need' selected>Need</option>
-            <option value='cart'>Cart</option>
-            <option value='have'>Have</option>
+            <option value='Need' selected>Need</option>
+            <option value='Cart'>Cart</option>
+            <option value='Have'>Have</option>
         </select>
         <input type="text" name='item' value="Item Name" onfocus="this.value=''">
         <input type="submit" value='Submit'>
