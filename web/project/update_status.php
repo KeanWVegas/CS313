@@ -1,6 +1,6 @@
 <?php
 
-$id = htmlspecialchars($_GET['itemname']);
+$item = htmlspecialchars($_GET['itemname']);
 
 $status = htmlspecialchars($_GET['status']);
 
@@ -14,9 +14,9 @@ $db = get_db();
 
 $sql = 'UPDATE items '
 
-        . 'SET stat = :status '
+        . 'SET status = :status '
 
-        . 'WHERE id = :id';
+        . 'WHERE item = :itemname';
 
 
 
