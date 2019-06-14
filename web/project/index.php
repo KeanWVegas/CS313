@@ -50,9 +50,19 @@ ini_set('display_errors', 1);
     
                 
                 foreach ($items as $item){
+                    
+                   $id = $item['id'];
+
+                   $status = $item['stat'];
+
+	               $name = $item['name']; 
+                    
                 echo "<tr>";
                     echo "<td align='center' width='200'>" . $item['status'] . "</td>";
                     echo "<td align='center' width='200'>" . $item['item'] . "</td>";
+                    echo "<select>";
+                        echo "<option value="Need">$name $status <a href='update_status.php?status=Need&id=$id'>Need</a>
+                    echo "</select>";
                 echo "</tr>";
         }
         echo "</table>";
