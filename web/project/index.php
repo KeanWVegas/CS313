@@ -47,7 +47,7 @@
 
         }
         else {
-            echo "Welcome, " $id;
+            echo "Welcome, " . $id;
             
         }
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
