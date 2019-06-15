@@ -17,10 +17,9 @@ error_reporting(E_ALL);
     $check->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $checkresult = $row[0]['id'];
-    $returncount = count($row);
 
-    if ($returncount >= 1) {
-        echo "This username is taken."
+    if (count($rows) >= 1) {
+        echo "This username is taken.";
     }
     else {
 
