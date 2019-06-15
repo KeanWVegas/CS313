@@ -9,8 +9,20 @@ error_reporting(E_ALL);
 
     $db = get_db();
 //select userid from user table where id=:id
-
     $name = $_POST["name"];
+    
+
+    $check = $db->prepare("SELECT FROM users (id, name) WHERE name=:name");
+    $check->bindValue(':name', $name);
+    $check->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $checkresult = $row[0]['id'];
+    if (count($row) >= 1) {
+        echo "This username is taken."
+    }
+    else {
+
+    
     $stmt = $db->prepare('INSERT INTO users (name) VALUES (:name)');
 
     $stmt->bindValue(':name', $name);
@@ -21,4 +33,5 @@ error_reporting(E_ALL);
 
     header("Location: index.php");
     die();
+    }
 ?>
