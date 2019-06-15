@@ -51,6 +51,7 @@
                    <div class='modal-body'>
                    
                        <form name='login' method='POST' action='login.php'>
+                            <h5> Username </h5>
                             <input name='name' type='text'>
                             <input class='btn btn-default' type='submit'>
                         </form>
