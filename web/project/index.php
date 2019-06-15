@@ -64,14 +64,7 @@
                        <form name='login' method='POST' action='login.php'>
         <input name='name' type='text'>
         <input type='submit'>
-                   </div>
-                   <div class='modal-footer'>
-                       <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-                   </div>
-               </div>
-           </div>
-       </div>
-    </form>
+                   
                    </div>
                    <div class='modal-footer'>
                        <button type='button' onclick='location.href='signup.php';'>Sign Up</button>
