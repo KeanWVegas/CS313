@@ -57,7 +57,7 @@
                         </form>
                    </div>
                    <div class='modal-footer'>
-                       <p> Sign up for an account! </p>
+                       <p> Don't have an account? </p>
                        <button type='button' class='btn btn-default' onclick=window.location.href='signup.php'>Sign Up</button>
                    </div>
                </div>
