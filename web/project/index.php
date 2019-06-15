@@ -36,7 +36,7 @@
             <option value='Have'>Have</option>
         </select>
         <input type="text" name='item' value="Item Name" onfocus="this.value=''">
-        <input type="submit" value='Submit'>
+        <input class='btn btn-default' type="submit" value='Submit'>
     </form>
     <?php
         
@@ -63,7 +63,7 @@
                    
                        <form name='login' method='POST' action='login.php'>
         <input name='name' type='text'>
-        <input type='submit'>
+        <input class='btn btn-default' type='submit'>
                    
                    </div>
                    <div class='modal-footer'>
