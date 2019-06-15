@@ -12,7 +12,7 @@ error_reporting(E_ALL);
     $name = $_POST["name"];
     
 
-    $check = $db->prepare("SELECT name FROM users WHERE name=:name");
+    $check = $db->prepare("SELECT name FROM users WHERE (name=':name')");
     $check->bindValue(':name', $name);
     $check->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
