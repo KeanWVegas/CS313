@@ -8,7 +8,7 @@
         require ("dbConnect.php");
 
         $db = get_db();
-try{
+
         $status = htmlspecialchars($_POST['status']);
         $item = htmlspecialchars($_POST['item']); 
         $id = $_SESSION['userid'];       
@@ -24,13 +24,5 @@ try{
         
         header("Location: index.php");
         die();
-}
-catch (Exception $ex)
-{
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
-	echo "Error with DB. Details: $ex";
-	die();
-}
 
     ?>
