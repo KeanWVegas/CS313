@@ -17,7 +17,7 @@
 
 <form name='login' method='POST' action='insertuser.php'>
     <h4> Enter a username: </h4>
-     <input name='name' type='text'>
+     <input class='btn btn-default' name='name' type='text'>
      <input class='btn btn-default' type='submit'>
 </form>
 </body>
