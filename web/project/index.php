@@ -57,9 +57,8 @@
                         </form>
                    </div>
                    <div class='modal-footer'>
-                        <br><p> Don't have an account? Make one: </p>
+                       <p> Don't have an account? Make one: </p>
                        <button type='button' class='btn btn-default' onclick=window.location.href='signup.php'>Sign Up</button>
-                       <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
                    </div>
                </div>
            </div>
