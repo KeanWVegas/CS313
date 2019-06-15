@@ -1,10 +1,14 @@
 <?PHP
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
     session_start();
     
     require("dbConnect.php");
 
-    $db = get_db(); 
-
+    $db = get_db();
+//select userid from user table where id=:id
 
     $name = $_POST["name"];
     $stmt = $db->prepare('INSERT INTO users (name) VALUES (:name)');
