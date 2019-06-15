@@ -12,11 +12,12 @@ error_reporting(E_ALL);
     $name = $_POST["name"];
     
 
-    $check = $db->prepare("SELECT FROM users (id, name) WHERE name=:name");
+    $check = $db->prepare("SELECT name FROM users WHERE name=:name");
     $check->bindValue(':name', $name);
     $check->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $checkresult = $row[0]['id'];
+
     if (count($row) >= 1) {
         echo "This username is taken."
     }
