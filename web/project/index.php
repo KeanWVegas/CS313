@@ -30,17 +30,10 @@
         
         $id = $_SESSION['userid'];
         
-        echo "<form name='insert' method='POST' action='insert.php'>
-        <select name='status' class='btn btn-default'>
-            <option value='Need' selected>Need</option>
-            <option value='Cart'>Cart</option>
-            <option value='Have'>Have</option>
-        </select>
-        <input type='text' name='item' class='btn btn-default' value='Item Name' onfocus='this.value='''>
-        <input class='btn btn-default' type='submit' value='Submit'>
-    </form>";
+        
     
         if (!$id) {
+                    
             echo "Please sign in to continue";
             echo "   <div class='container' display>
        <!-- Trigger the modal with a button -->
@@ -73,6 +66,17 @@
        </div>";
             die();
         }
+        
+        echo "<form name='insert' method='POST' action='insert.php'>
+        <select name='status' class='btn btn-default'>
+            <option value='Need' selected>Need</option>
+            <option value='Cart'>Cart</option>
+            <option value='Have'>Have</option>
+        </select>
+        <input type='text' name='item' class='btn btn-default' value='Item Name' onfocus='this.value='''>
+        <input class='btn btn-default' type='submit' value='Submit'>
+        </form>";
+    
         
         $result = $db->prepare("SELECT * FROM public.lists WHERE userid = :id");
     
