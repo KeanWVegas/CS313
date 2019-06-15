@@ -64,7 +64,7 @@
                        <form name='login' method='POST' action='login.php'>
         <input name='name' type='text'>
         <input type='submit'>
-        <div class='create account'>
+        <div class='createaccount'>
        <!-- Trigger the modal with a button -->
        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Sign In</button>
 
@@ -89,7 +89,7 @@
                    </div>
                </div>
            </div>
-       </div>";
+       </div>
     </form>
                    </div>
                    <div class='modal-footer'>
