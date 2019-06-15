@@ -22,7 +22,7 @@
   
 
     <h1>Grocery Sorcery</h1>
-    <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
+    <h3>The eezypeezy grocery list</h3>
     
 
     <?php
@@ -57,7 +57,7 @@
                         </form>
                    </div>
                    <div class='modal-footer'>
-                        <p> Don't have an account? Make one: </p>
+                        <br><p> Don't have an account? Make one: </p>
                        <button type='button' class='btn btn-default' onclick=window.location.href='signup.php'>Sign Up</button>
                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
                    </div>

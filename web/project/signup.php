@@ -1,16 +1,16 @@
 <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
+           
 
     require ("dbConnect.php");
     $db = get_db();   
 
     session_start();
-
-
-     echo "<form name='login' method='POST' action='insertuser.php'>";
-     echo "<input name='name' type='text'>";
-     echo "<input class='btn btn-default' type='submit'>";
-
 ?>
+
+<h1>Grocery Sorcery</h1>
+    <h3>The eezypeezy grocery list</h3>
+
+<form name='login' method='POST' action='insertuser.php'>";
+     <input name='name' type='text'>";
+     <input class='btn btn-default' type='submit'>";
+</form>
