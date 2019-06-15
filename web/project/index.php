@@ -25,19 +25,20 @@
     <h1>Grocery Sorcery</h1>
     <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
     
-    <form name="insert" method="POST" action="insert.php">
+
+    <?php
+        
+        $id = $_SESSION['userid'];
+        
+        echo "<form name='insert' method='POST' action='insert.php'>
         <select name='status' class='btn btn-default'>
             <option value='Need' selected>Need</option>
             <option value='Cart'>Cart</option>
             <option value='Have'>Have</option>
         </select>
-        <input type="text" name='item' class='btn btn-default' value="Item Name" onfocus="this.value=''">
-        <input class='btn btn-default' type="submit" value='Submit'>
-    </form>
-    <?php
-        
-        $id = $_SESSION['userid'];
-        
+        <input type='text' name='item' class='btn btn-default' value='Item Name' onfocus='this.value='''>
+        <input class='btn btn-default' type='submit' value='Submit'>
+    </form>";
     
         if (!$id) {
             echo "Please sign in to continue";
