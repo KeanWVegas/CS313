@@ -10,7 +10,7 @@
 <h1>Grocery Sorcery</h1>
     <h3>The eezypeezy grocery list</h3>
 
-<form name='login' method='POST' action='insertuser.php'>";
-     <input name='name' type='text'>";
-     <input class='btn btn-default' type='submit'>";
+<form name='login' method='POST' action='insertuser.php'>
+     <input name='name' type='text'>
+     <input class='btn btn-default' type='submit'>
 </form>
