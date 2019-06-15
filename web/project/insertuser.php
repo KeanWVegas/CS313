@@ -3,11 +3,7 @@
     
     require("dbConnect.php");
 
-    $db = get_db();
-//select userid from user table where id=:id 
-?>
-
-<?php
+    $db = get_db(); 
 
 
     $name = $_POST["name"];
