@@ -15,7 +15,7 @@
 
 
     $name = $_POST["name"];
-    $stmt = $db->prepare('INSERT INTO lists (name) VALUES (:name)');
+    $stmt = $db->prepare('INSERT INTO users (name) VALUES (:name)');
 
     $stmt->bindValue(':name', $name);
     $stmt->execute();
