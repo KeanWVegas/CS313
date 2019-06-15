@@ -1,8 +1,4 @@
 <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
-
     require ("dbConnect.php");
     $db = get_db();   
 
@@ -57,16 +53,17 @@
                <div class='modal-content'>
                    <div class='modal-header'>
                        <button type='button' class='close' data-dismiss='modal'>&times;</button>
-                       <h4 class='modal-title'>Modal Header</h4>
+                       <h4 class='Sign In'>Modal Header</h4>
                    </div>
                    <div class='modal-body'>
                    
                        <form name='login' method='POST' action='login.php'>
-        <input name='name' type='text'>
-        <input class='btn btn-default' type='submit'>
-                   
+                            <input name='name' type='text'>
+                            <input class='btn btn-default' type='submit'>
+                        </form>
                    </div>
                    <div class='modal-footer'>
+                        <p> Don't have an account? Make one: </p>
                        <button type='button' class='btn btn-default' onclick=window.location.href='signup.php'>Sign Up</button>
                        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
                    </div>
