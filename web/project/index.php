@@ -26,12 +26,12 @@
     <h3>The eezypeezylemonsqueezy way to track your groceries</h3>
     
     <form name="insert" method="POST" action="insert.php">
-        <select name='status'>
+        <select name='status' class='btn btn-default'>
             <option value='Need' selected>Need</option>
             <option value='Cart'>Cart</option>
             <option value='Have'>Have</option>
         </select>
-        <input type="text" name='item' value="Item Name" onfocus="this.value=''">
+        <input type="text" name='item' class='btn btn-default' value="Item Name" onfocus="this.value=''">
         <input class='btn btn-default' type="submit" value='Submit'>
     </form>
     <?php
@@ -41,7 +41,7 @@
     
         if (!$id) {
             echo "Please sign in to continue";
-            echo "   <div class='container'>
+            echo "   <div class='container' display>
        <!-- Trigger the modal with a button -->
        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#myModal'>Sign In</button>
 
