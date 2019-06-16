@@ -11,7 +11,8 @@ error_reporting(E_ALL);
 //select userid from user table where id=:id
     $name = $_POST["name"];
     
-    $stmt = $db->prepare('INSERT INTO users (name) VALUES (:name)');
+    $insertsql = 'INSERT INTO users (name) VALUES (:name)';
+    $stmt = $db->prepare($insertsql);
 
     $stmt->bindValue(':name', $name);
     $stmt->execute();
