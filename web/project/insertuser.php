@@ -6,7 +6,7 @@
 
     $name = $_POST['name'];
     
-    $insertsql = 'INSERT INTO users (name) VALUES ('testtest')';
+    $insertsql = "INSERT INTO users (name) VALUES (':name')";
     $stmt = $db->prepare($insertsql);
 
     $stmt->bindValue(':name', $name, PDO::PARAM_STR);
