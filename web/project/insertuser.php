@@ -12,7 +12,7 @@ error_reporting(E_ALL);
     $name = $_POST["name"];
     $stmt = $db->prepare("INSERT INTO users (name) VALUES (':name')");
 
-    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
