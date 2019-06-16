@@ -72,7 +72,7 @@
             <option value='Cart'>Cart</option>
             <option value='Have'>Have</option>
         </select>
-        <input type='text' name='item' class='btn btn-default' value='Item Name' onfocus='this.value='''>
+        <input type='text' name='item' class='btn btn-default' value='Item Name' onfocus=this.value=''>
         <input class='btn btn-default' type='submit' value='Submit'>
         </form>";
     
