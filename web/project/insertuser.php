@@ -11,19 +11,6 @@ error_reporting(E_ALL);
 //select userid from user table where id=:id
     $name = $_POST["name"];
     
-/*
-    $check = $db->prepare("SELECT name FROM users WHERE (name=':name')");
-    $check->bindValue(':name', $name);
-    $check->execute();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $checkresult = $row[0]['id'];
-
-    if (count($rows) >= 1) {
-        echo "This username is taken.";
-    }
-    else {*/
-
-    
     $stmt = $db->prepare('INSERT INTO users (name) VALUES (:name)');
 
     $stmt->bindValue(':name', $name);
