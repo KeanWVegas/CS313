@@ -8,11 +8,6 @@
     require("dbConnect.php");
 
     $db = get_db();
-//select userid from user table where id=:id 
-?>
-
-<?php
-
 
     $name = $_POST["name"];
     $stmt = $db->prepare('SELECT id FROM users WHERE name=:name');
