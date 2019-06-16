@@ -10,7 +10,7 @@ error_reporting(E_ALL);
     $db = get_db();
 
     $name = $_POST["name"];
-    $stmt = $db->prepare("INSERT INTO users (name) VALUES (':name');");
+    $stmt = $db->prepare("INSERT INTO users (name) VALUES (':name')");
 
     $stmt->bindValue(':name', $name);
     $stmt->execute();
@@ -20,5 +20,4 @@ error_reporting(E_ALL);
 
     header("Location: index.php");
     die();
-    }
 ?>
