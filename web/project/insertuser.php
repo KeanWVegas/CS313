@@ -1,21 +1,22 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+<?php            
+        session_start();
 
-    require("dbConnect.php");
+        require ("dbConnect.php");
 
-    $db = get_db();
+        $db = get_db();
+ 
+        $name = htmlspecialchars($_POST['name']);       
+        
+        echo $name;
 
-    $name = $_POST["name"];
-    $stmt = $db->prepare("INSERT INTO users (name) VALUES (':name')");
+        $insertquery = "INSERT INTO users (name) VALUES (:name)";
 
-    $stmt->bindValue(':name', $name);
-    $stmt->execute();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-     $_SESSION["userid"] = $rows[0]['id'];
+        $stmt = $db->prepare($insertquery);
 
-    header("Location: index.php");
-    die();
-?>
+        $stmt->bindValue(':name', $name);
+        $stmt->execute();
+        
+        header("Location: index.php");
+        die();
+
+    ?>
