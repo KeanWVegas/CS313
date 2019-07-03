@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition();
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+
+        /*function showPosition(position) {
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=14&size=400x300 &sensor=false&key=AIzaSyD8rsVAqPgTd6MW67lvU5funZ1qEgBR6Oc";
+
+            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        }*/
+
+    </script>
+
+</head>
+
+
+
+<body onload="getLocation()">
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+                <input type="submit" class="ghost-button" value="Get Weather">
+            </form>
+            <% if(weather !== null){ %>
+            <p><%= weather %></p>
+            <% } %>
+
+            <% if(error !== null){ %>
+            <p><%= error %></p>
+            <% } %>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>
