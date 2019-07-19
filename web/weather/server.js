@@ -8,6 +8,8 @@ const apiKey = '2b782131784f7db69247b373ce73fb8f';
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
+app.set("port", (process.env.PORT || 3000));
+
 
 app.get('/', function (req, res) {
   res.render('index', {weather: null, error: null});
@@ -32,6 +34,6 @@ app.post('/', function (req, res) {
   });
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(app.get("port"), function () {
+  console.log('Example app listening on port ' + app.get("port"));
 })
