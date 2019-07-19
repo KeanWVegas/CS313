@@ -5,11 +5,11 @@ const app = express()
 
 const apiKey = '2b782131784f7db69247b373ce73fb8f';
 
+app.set("port", (process.env.PORT || 3000));
+
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
-app.set("port", (process.env.PORT || 3000));
-
 
 app.get('/', function (req, res) {
   res.render('index', {weather: null, error: null});
