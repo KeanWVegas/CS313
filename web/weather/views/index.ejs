@@ -5,48 +5,134 @@
     <meta charset="utf-8">
     <title>Test</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
-    <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition();
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-
-
-        /*function showPosition(position) {
-            var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=14&size=400x300 &sensor=false&key=AIzaSyD8rsVAqPgTd6MW67lvU5funZ1qEgBR6Oc";
-
-            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
-        }*/
-
-    </script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyD8rsVAqPgTd6MW67lvU5funZ1qEgBR6Oc"></script>
 
 </head>
 
-
-
-<body onload="getLocation()">
+<body onload="initialize()">
     <div class="container">
+
+        <script>
+            var geocoder = new google.maps.Geocoder();
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+            }
+            //Get the latitude and the longitude;
+            function successFunction(position) {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                codeLatLng(lat, lng)
+            }
+
+            function errorFunction() {
+                alert("Geocoder failed");
+            }
+
+            function initialize() {
+                geocoder = new google.maps.Geocoder();
+
+
+
+            }
+
+            function extractFromAddress(components, type) {
+                for (var i = 0; i < components.length; i++)
+                    for (var j = 0; j < components[i].types.length; j++)
+                        if (components[i].types[j] == type) return components[i].long_name;
+                return "";
+            }
+
+            function codeLatLng(lat, lng) {
+
+                var latlng = new google.maps.LatLng(lat, lng);
+                geocoder.geocode({
+                    'latLng': latlng
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        console.log(results)
+                        if (results[1]) {
+                            //find country name
+                            for (var i = 0; i < results[0].address_components.length; i++) {
+                                for (var b = 0; b < results[0].address_components[i].types.length; b++) {
+
+                                    //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
+                                    if (results[0].address_components[i].types[b] == "locality") {
+                                        //this is the object you are looking for
+                                        window.town = extractFromAddress(results[0].address_components, "locality");
+                                        break;
+                                    }
+                                }
+                            }
+                            //city data
+
+                            document.getElementById("town").innerHTML = "Current Location: " + town;
+                        } else {
+                            alert("No results found");
+                        }
+                    } else {
+                        alert("Geocoder failed due to: " + status);
+                    }
+                });
+            }
+
+            function localWeather(cityID) {
+                var key = '2b782131784f7db69247b373ce73fb8f';
+                fetch('https://api.openweathermap.org/data/2.5/weather?q=' + town + '&appid=' + key)
+                    .then(function(resp) {
+                        return resp.json()
+                    }) // Convert data to json
+                    .then(function(data) {
+                        drawWeather(data);
+                    })
+                    .catch(function() {
+                        // catch any errors
+                    });
+
+
+            }
+
+            window.onload = function() {
+                localWeather();
+            }
+
+            function drawWeather(d) {
+                var celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+                var fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+
+                document.getElementById('description').innerHTML = d.weather[0].description;
+                document.getElementById('temp').innerHTML = celcius + '&deg;';
+                document.getElementById('location').innerHTML = d.name;
+            }
+
+        </script>
         <fieldset>
             <form action="/" method="post">
-                <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+                <input name="city" id="city" type="text" class="ghost-input" placeholder="Enter a City" required>
                 <input type="submit" class="ghost-button" value="Get Weather">
             </form>
-            <% if(weather !== null){ %>
-            <p><%= weather %></p>
-            <% } %>
 
-            <% if(error !== null){ %>
-            <p><%= error %></p>
-            <% } %>
+            <% if (weather !== null){ %>
+                <p>
+                    <%= weather %>
+                </p>
+                <% } %>
+
+                    <% if(error !== null){ %>
+                        <p>
+                            <%= error %>
+                        </p>
+                        <% } %>
         </fieldset>
-    </div>
 
+        <div id="weather">
+            <fieldset>
+                <p id="town"></p>
+                <div id="description"></div>
+                <h1 id="temp"></h1>
+            </fieldset>
+        </div>
+    </div>
 </body>
 
 </html>
